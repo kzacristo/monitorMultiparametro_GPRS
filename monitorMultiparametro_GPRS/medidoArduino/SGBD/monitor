@@ -1,0 +1,19 @@
+﻿DROP TABLE IF EXISTS cliente CASCADE;
+
+CREATE TABLE cliente(
+	id serial NOT NULL,
+	sat INT,
+	FC INT,
+	data_atendimento date NOT NULL default CURRENT_DATE,
+	hora time NOT NULL default CURRENT_TIME,
+	PRIMARY KEY (id, data_atendimento)
+);
+insert into cliente (sat, FC) values (95,100);
+insert into cliente (sat, FC) values (95,100);
+insert into cliente (sat, FC) values (95,100);
+insert into cliente (sat, FC) values (95,100);
+
+
+select * from cliente;
+
+--SELECT CURRENT_TIME(2);
